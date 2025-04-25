@@ -1,0 +1,13 @@
+services:
+  server:
+    build:
+      context: ./server
+    container_name: server
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Seoul
+      - TASHU_API_URL=${TASHU_API_URL}
+      - TASHU_API_KEY=${TASHU_API_KEY}
+      - SLACK_URL=${SLACK_URL}

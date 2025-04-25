@@ -1,0 +1,12 @@
+config:
+  base-name: ${BASE_NAME:"Argonet"}
+  base-latitude: ${BASE_LATITUDE:36.368725}
+  base-longitude: ${BASE_LONGITUDE:127.380790}
+  max-distance-meter: ${MAX_DISTANCE_METER:400}
+
+tashu-api:
+  url: ${TASHU_API_URL:"https://bikeapp.tashu.or.kr:50041/v1/openapi"}
+  key: ${TASHU_API_KEY}
+
+slack:
+  url: ${SLACK_URL}
