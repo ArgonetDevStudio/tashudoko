@@ -1,6 +1,7 @@
 package io.github.shanepark.tashudoko;
 
 import io.github.shanepark.tashudoko.configuration.AppConfig;
+import io.github.shanepark.tashudoko.configuration.SlackConfig;
 import io.github.shanepark.tashudoko.configuration.TashuApiConfig;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
@@ -23,12 +24,14 @@ public class TashudokoApplication {
 
     private final AppConfig appConfig;
     private final TashuApiConfig tashuApiConfig;
+    private final SlackConfig slackConfig;
 
     @PostConstruct
     public void init() {
         log.info("=========================================");
         log.info("AppConfig: {}", appConfig);
         log.info("TashuApiClient: {}", tashuApiConfig);
+        log.info("SlackConfig: {}", slackConfig);
     }
 
 }
